@@ -1,0 +1,31 @@
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+.no-sidetap {display: none;}
+
+
+/* -----------------------------------------
+   Index
+----------------------------------------- */
+
+#index-view {
+    
+}
+
+#input {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#lang-list {
+    position: absolute;
+    top: 48px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+}
