@@ -43,7 +43,7 @@ $ ->
     )
         
     $( '#input' ).ime( {
-        imePath: '/libs/jquery.ime/',
+        imePath: 'libs/jquery.ime/',
         languages: active_languages
     } )
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html class="no-sidetap">
+<html class="no-sidetap" manifest="simple.manifest">
     <head>
-        <title>Indic Transliteration Tool</title>
+        <title>Indic Typing Tool</title>
 
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -10,20 +10,14 @@
         <link type="text/css" rel="stylesheet" media="screen" href="stylesheets/main.css" />
         <link type="text/css" rel="stylesheet" media="screen" href="libs/jquery.ime/css/jquery.ime.css" />
 
+        <script src="libs/jquery-1.8.3.min.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.preferences.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.selector.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.inputmethods.js"> </script>
+        <script src="javascripts/main.js"> </script>
+
         <link rel="shortcut icon" href="images/favicon.ico">
-        <script src="/_/head.js"></script>
-        <script type="text/javascript">
-            head.js("libs/jquery-1.8.3.min.js");
-            head.ready(function() {
-                    head.js("libs/jquery.ime/src/jquery.ime.js");
-                    head.js("libs/jquery.ime/src/jquery.ime.preferences.js");
-                    head.js("libs/jquery.ime/src/jquery.ime.selector.js");
-                    head.js("libs/jquery.ime/src/jquery.ime.inputmethods.js");
-                    head.js("javascripts/main.js");
-                    // add scripts here
-                }
-            );
-        </script>
     </head>
     <body id="{{view}}-view" data-view="{{view}}">
         <div class="sidetap">
