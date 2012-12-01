@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# v1.3
+# v1.4
 
 CACHE:
 index.html
@@ -86,3 +86,6 @@ images/info.png
 images/menu.png
 images/arrow-right-white.png
 stylesheets/main.css
+
+NETWORK:
+socket.io/socket.io
