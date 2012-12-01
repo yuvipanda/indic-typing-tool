@@ -23,6 +23,8 @@ populateIMs = ( lang ) ->
         )
 
 $ ->
+    $.ajaxSetup( cache: true )
+
     for lang, data of $.ime.languages
         if lang in active_languages
             $lang = $( '<option>' ).attr( 'value', lang ).text( data.autonym )
