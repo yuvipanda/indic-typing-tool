@@ -5,12 +5,8 @@
 .no-sidetap {display: none;}
 
 
-/* -----------------------------------------
-   Index
------------------------------------------ */
-
-#index-view {
-    
+a {
+    text-decoration: none;
 }
 
 #input {
