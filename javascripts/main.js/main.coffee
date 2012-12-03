@@ -11,45 +11,33 @@ getLang = ->
 getIM = ->
     localStorage.im ? 'hi-transliteration'
 
-setLang = ( lang ) ->
-    localStorage.lang = lang
-
-populateIMs = ( lang ) ->
-    langData = $.ime.languages[ lang ]
-    $( '#keyboards' ).empty()
-    for im in langData.inputmethods
-        $( '#keyboards' ).append( 
-            $( '<option>' ).attr( 'value', im ).text( $.ime.sources[ im ].name )
-        )
-
 $ ->
     $.ajaxSetup( cache: true )
 
-    for lang, data of $.ime.languages
-        if lang in active_languages
-            $lang = $( '<option>' ).attr( 'value', lang ).text( data.autonym )
-            $( '#languages' ).append( $lang );
-
-    $( '#languages' ).change( ->
-        langCode = $( this ).val()
-        console.log( langCode )
-        populateIMs( langCode )
-        setLang( langCode )
-        setIM( $( '#keyboards' ).val() )
-    )
-
-    $( '#keyboards' ).change( ->
-        im = $( this ).val()
-        setIM( im )
-        window.stap.toggle_nav()
-    )
-        
     $( '#input' ).ime( {
         imePath: 'libs/jquery.ime/',
         languages: active_languages
     } )
 
-    $( '#languages option[value="' + getLang() + '"]' ).attr( 'selected', 'selected' )
-    populateIMs( getLang() )
-    $( '#keyboards option[value="' + getIM() + '"]' ).attr( 'selected', 'selected' )
-    setIM( getIM() )
+    for lang, data of $.ime.languages
+        if lang in active_languages
+            $lang = $( '<select>' )
+            $a = $( '<a>' ).append( $lang )
+            for im in data.inputmethods
+                $lang.append(
+                    $( '<option>').attr( 'value', im ).text( data.autonym + ' - ' + $.ime.sources[ im ].name )
+                )
+                if getIM() == im
+                    $a.addClass( 'selected' )
+                    console.log( im )
+                    setIM( im )
+            $( '#nav' ).append( $a )
+
+
+    $( '#nav select' ).change( ->
+        im = $( this ).val()
+        setIM( im )
+        $( '#nav a.selected' ).removeClass( 'selected' )
+        $( this ).parent( 'a' ).addClass( 'selected' )
+    ).focus( -> $( this ).change() )
+        
