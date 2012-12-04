@@ -48,3 +48,16 @@ nav a.selected {
 nav a.selected select {
     color: #000;
 }
+
+#about .container {
+    text-align: center;
+    line-height: 150%;
+}
+
+#about .container p {
+    margin-bottom: 12px;
+}
+
+#about small {
+    font-size: 80%;
+}
