@@ -10,7 +10,7 @@ The project is written as a pure HTML offline application - no server side compo
 
 ## Credits
 
-Many thanks to [Santhosh Thottingal][sant] for answering my questions during the 
+Many thanks to [Santhosh Thottingal][sant] for answering my questions during the development of the tool.
 
 [wmfle]: https://wikimediafoundation.org/wiki/Language_Engineering_team
 [jime]: http://github.com/wikimedia/jquery.ime
