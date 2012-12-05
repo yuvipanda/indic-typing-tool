@@ -17,7 +17,10 @@ $ ->
     $( '#input' ).ime( {
         imePath: 'libs/jquery.ime/',
         languages: active_languages
-    } )
+    } ).keyup( ->
+        localStorage.curText = $( this ).val()
+    ).text( localStorage.curText ? '' )
+
 
     for lang, data of $.ime.languages
         if lang in active_languages
