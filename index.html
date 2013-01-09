@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-sidetap" manifest="simple.manifest">
+    <head>
+        <title>Indic Typing Tool</title>
+
+        <meta charset='utf-8' />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <link type="text/css" rel="stylesheet" media="screen" href="stylesheets/main.css/main.css" />
+        <link type="text/css" rel="stylesheet" media="screen" href="libs/jquery.ime/css/jquery.ime.css" />
+
+        <script src="libs/jquery-1.8.3.min.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.preferences.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.selector.js"> </script>
+        <script src="libs/jquery.ime/src/jquery.ime.inputmethods.js"> </script>
+        <script src="javascripts/main.js/bundled_js.js"> </script>
+
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body id="index-view" data-view="index">
+        <div class="sidetap">
+            <div class="stp-nav">
+                <div>
+                    <nav id="nav">
+                    <a class='nav-header'>Select Language</a>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="stp-content" id="content">
+                <header class="stp-fake-header">&nbsp;</header>
+                <div class="stp-overlay nav-toggle">&nbsp;</div>
+
+                <!-- Content Divs Look Like This -->
+                <!-- Home page -->
+<div class="stp-content-panel" id="index">
+    <header>
+        <a href="javascript:void(0)" class="header-button icon menu"><span>Menu</span></a>
+        <a href="javascript:void(0)" class="header-button icon info right"><span>Info</span></a>
+        <h1>Indic Typing Tool</h1>
+    </header>
+    <div class="stp-content-frame">
+        <div class="stp-content-body">
+            <div id="input-container" class="container">
+                <textarea id="input" autocapitalize="off" autocorrect="off"> </textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Language Selector Page -->
+<div class="stp-content-panel hidden" id="lang-selector">
+    <header>
+        <a href="javascript:void(0)" class="header-button icon menu"><span>Menu</span></a>
+        <h1>Select Keyboard</h1>
+    </header>
+
+    <div class="stp-content-frame">
+        <div class="stp-content-body">
+            <div class="container listContainer" id="lang-list">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Slide-up page -->
+<div class="stp-content-panel hidden" id="about">
+    <header>
+        <a href="javascript:void(0)" class="header-button cancel right">Done</a>
+        <h1>What's This?</h1>
+    </header>
+
+    <div class="stp-content-frame">
+        <div class="stp-content-body">
+            <div class="container">
+                <p>A small tool to let you type in any of the Indic languages on your iOS device. </p>
+                <p>You can type it here, and copy-paste it to whatever application you want.</p>
+                <p>Confused about how to use the tool? There is <a href="https://meta.wikimedia.org/wiki/India_Access_To_Knowledge/Community_support/Tools_and_apps/Indic_typing_tool#Typing_using_this_tool">a helpful tutorial!</a></p>
+                <p>Think you can make this tool better? <a href="https://github.com/yuvipanda/indic-typing-tool">Use the source</a> and show us how!</a>
+                <br /> <br />
+                <small>Made by <a href="http://yuvi.in">YuviPanda</a>, idea by <a href="https://meta.wikimedia.org/wiki/User:Psubhashish">Subhashish</a>. <br />Coded at <a href="http://cis-india.org/">CIS India</a>'s Delhi office.</small>
+                <p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- End content Div -->
+            </div>
+        </div>
+    </body>
+</html>
