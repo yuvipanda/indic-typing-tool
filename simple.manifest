@@ -86,6 +86,3 @@ images/info.png
 images/menu.png
 images/arrow-right-white.png
 stylesheets/main.css/main.css
-
-NETWORK:
-socket.io/socket.io
