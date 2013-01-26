@@ -14,6 +14,10 @@ getIM = ->
 $ ->
     $.ajaxSetup( cache: true )
 
+    $( window ).resize( ->
+        $( '#input' ).height( $( window ).height() ).width( $( window ).width() ).css( 'margin-top', '48px' )
+    )
+
     $( '#input' ).ime( {
         imePath: 'libs/jquery.ime/',
         languages: active_languages
@@ -43,4 +47,5 @@ $ ->
         $( '#nav a.selected' ).removeClass( 'selected' )
         $( this ).parent( 'a' ).addClass( 'selected' )
     ).focus( -> $( this ).change() )
+    $( window ).trigger( 'resize' )
         
