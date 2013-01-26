@@ -1,0 +1,13 @@
+{
+	"name":"IndicIME",
+	"description":"Indic Language IME",
+	"launch_path":"index.html",
+	"icons": {
+		"128": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wikipedia_logo_silver_wt.png/128px-Wikipedia_logo_silver_wt.png"
+	},
+	"developer":{
+		"name": "Yuvi Panda",
+		"url": "http://yuvi.in"
+	},
+	"default_locale": "en"
+}
